@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Practic2_6</string>
+    <string name="Hello">Белин, РИБО-01-22, Вариант 1</string>
+    <string name="Bye">Покааааааааааааааааа</string>
+    <string name="buttonText">Перейти к вводу чисел</string>
+    <string name="firstMultiplier">Первый множитель</string>
+    <string name="secondMultiplier">Второй множитель</string>
+    <string name="thirdMultiplier">Третий множитель</string>
+    <string name="toCount">Посчитать</string>
+</resources>
