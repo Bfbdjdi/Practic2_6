@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.btnStartActivity)
         {
+            Log.d("action", "The button was clicked. Starting CalcAct...");
             Intent intent = new Intent(this, com.mirea.kt.Belin_hw8.CalcActivity.class);
             activityResultLaunch.launch(intent);
         }
@@ -41,10 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ActivityResultLauncher<Intent> activityResultLaunch = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
+            Log.d("action", "Waiting for an answer...");
             if (result.getData() != null)
             {
                 float res = result.getData().getFloatExtra("data", 0);
-                Log.d("simple_app_tag", "Result = " + res);
+                Log.d("result", "Result = " + res);
                 tvTextValue.setText("Произведение чисел: " + res);
             }
         }

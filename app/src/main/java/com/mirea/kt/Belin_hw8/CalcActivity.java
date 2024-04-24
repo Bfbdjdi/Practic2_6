@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,9 +29,11 @@ public class CalcActivity extends AppCompatActivity {
                     if (!firstTermStr.isEmpty() && !secondTermStr.isEmpty() && !thirdTermStr.isEmpty())
                     {
                         float result = Float.parseFloat(firstTermStr) * Float.parseFloat(secondTermStr) * Float.parseFloat(thirdTermStr);
+                        Log.d("actionCalc", "Ready to return the answer");
                         Intent intent = new Intent();
                         intent.putExtra("data", result);
                         setResult(RESULT_OK, intent);
+                        Log.d("actionCalc", "Finished");
                         finish();
                     }
                     else {
